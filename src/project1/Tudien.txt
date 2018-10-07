@@ -1,0 +1,4 @@
+|Hello	|Xin Chao
+|Cat	|Con Meo
+|House	|Ngoi Nha
+|Bike	|Xe May

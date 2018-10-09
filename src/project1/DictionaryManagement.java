@@ -1,4 +1,5 @@
-package word;
+package project1;
+
 import java.util.Scanner;
 import java.io.*;
 
@@ -51,12 +52,12 @@ public class DictionaryManagement {
   }
 
   public void dictionaryLookUp(){
-    Scanner sSearch = new Scanner(System.in);
+    Scanner Searchs = new Scanner(System.in);
     System.out.println("An search de search, nut bat ky de thoat");
-    keyWord = sSearch.nextLine();
+    String keyWord = Searchs.nextLine();
     if(keyWord.equals(search)){
       System.out.println("Nhap tu can tim kiem: ");
-      String keySearch = sSearch.nextLine();
+      String keySearch = Searchs.nextLine();
       for(int i=0; i<wordCount; i++){
         if(a.dictionary.get(i).word_target.equals(keySearch)) {
           System.out.println(a.dictionary.get(i).word_target + "   " + a.dictionary.get(i).word_explain);

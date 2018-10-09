@@ -1,4 +1,5 @@
-package word;
+package project1;
+
 import java.util.Scanner;
 import java.io.*;
 
@@ -19,7 +20,7 @@ public class DictionaryCommandline{
 
   public void endApp(){
     this.isRunning = false;
-  // }
+  }
 
   public void dictionaryAdvanced(int i, boolean isRunning) throws FileNotFoundException,IOException {
     if(i == 0) x.insertFromFile();

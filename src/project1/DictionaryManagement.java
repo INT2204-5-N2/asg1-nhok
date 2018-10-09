@@ -5,11 +5,11 @@ import java.io.*;
 
 public class DictionaryManagement {
       private int wordCount;
-      private String search = new String("search");
+      private String search = new String("1");
       public String getSearch(){return search;}
-      private String fix = new String("fix");
+      private String fix = new String("2");
       public String getFix(){return fix;}
-      private String delete = new String("delete");
+	  private String delete = new String("3");
       public String getDelete(){return delete;}
       Dictionary a = new Dictionary();
       public int getWordCount(){
@@ -30,22 +30,22 @@ public class DictionaryManagement {
   }
 
   public void insertFromFile()  throws FileNotFoundException,IOException {
-    Scanner tu;
+    Scanner words0;
     File file = new File("src\\project1\\Tudien.txt");
-    tu = new Scanner(file);
+    words0 = new Scanner(file);
 	FileReader fileread = new FileReader("C:\\Github\\asg1-nhok\\src\\project1\\Tudien.txt");
     BufferedReader reader = new BufferedReader(fileread);
-    int lines = 0;
+    int dong = 0;
     while (reader.readLine() != null) {
-      lines++;
+      dong++;
     }
-    System.out.println(lines);
+    System.out.println(dong);
 	fileread.close();
     reader.close();
-    for(int i=0; i<lines;i++){
-      String s = new String(tu.nextLine());
+    for(int i=0; i<dong;i++){
+      String s = new String(words0.nextLine());
       wordCount++;
-      String[] day = s.split("  ");
+      String[] day = s.split("	");
       Word words1 = new Word();
       words1.word_target = day[0];
       words1.word_explain = day[1];
@@ -55,9 +55,6 @@ public class DictionaryManagement {
 
   public void dictionaryLookUp(){
     Scanner Searchs = new Scanner(System.in);
-    System.out.println("An search de search, nut bat ky de thoat");
-    String keyWord = Searchs.nextLine();
-    if(keyWord.equals(search)){
       System.out.println("Nhap tu can tim kiem: ");
       String keySearch = Searchs.nextLine();
       for(int i=0; i<wordCount; i++){
@@ -65,33 +62,44 @@ public class DictionaryManagement {
           System.out.println(a.dictionary.get(i).word_target + "   " + a.dictionary.get(i).word_explain);
           break;
         }
-      }
+	if(i==wordCount-1) System.out.println("Error");
     }
+	System.out.println("Nhap 1 de tiep tuc, bat ki de dung lai: ");
+	String key = Searchs.nextLine();
+	if(key.equals("1")) dictionaryLookUp();
 }
   public  void dictionaryFix(){
-    Scanner wFix = new Scanner(System.in);
+    Scanner Fixs = new Scanner(System.in);
     System.out.println("Nhap tu can sua: ");
-    String wordFix = wFix.nextLine();
+    String wordFix = Fixs.nextLine();
     for(int i=0; i<wordCount; i++){
       if(a.dictionary.get(i).word_target.equals(wordFix)) {
         System.out.println("Ban muon sua thanh tu: ");
-        a.dictionary.get(i).word_target = wFix.nextLine();
+        a.dictionary.get(i).word_target = Fixs.nextLine();
         break;
       }
+	  if(i==wordCount-1) System.out.println("Error");
     }
+	System.out.println("Nhap 1 de tiep tuc, bat ki de dung lai: ");
+	String key = Fixs.nextLine();
+	if(key.equals("1")) dictionaryFix();
   }
 
   public void dictionaryDelete(){
-    Scanner wDelete = new Scanner(System.in);
+    Scanner Deletes = new Scanner(System.in);
     System.out.println("Nhap tu can xoa: ");
-    String wordDelete = wDelete.nextLine();
+    String wordDelete = Deletes.nextLine();
     for(int i=0; i<wordCount; i++){
       if(a.dictionary.get(i).word_target.equals(wordDelete)){
         a.dictionary.remove(i);
         wordCount--;
         break;
       }
+	  if(i==wordCount-1) System.out.println("Error");
     }
+	System.out.println("Nhap 1 de tiep tuc, bat ki de dung lai: ");
+	String key = Deletes.nextLine();
+	if(key.equals("1")) dictionaryDelete();
   }
 
 }

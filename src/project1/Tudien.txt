@@ -1,4 +1,3 @@
-Hello	Xin Chao
-Cat	Con Meo
-House	Ngoi Nha
+Hello	Xin Chao 
+House	Ngoi Nha 
 Bike	Xe May

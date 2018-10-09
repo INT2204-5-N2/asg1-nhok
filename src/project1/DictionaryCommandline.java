@@ -3,6 +3,7 @@ package project1;
 import java.util.Scanner;
 import java.io.*;
 
+
 public class DictionaryCommandline{
   DictionaryManagement x = new DictionaryManagement();
   boolean isRunning = true;
@@ -14,7 +15,7 @@ public class DictionaryCommandline{
   }
   public void dictionaryBasic() throws FileNotFoundException,IOException {
     x.insertFromCommandline();
-    x.insertFromFile();
+    //x.insertFromFile();
     showAllWords();
   }
 
@@ -31,7 +32,7 @@ public class DictionaryCommandline{
     if(keyWord.equals(x.getSearch())) x.dictionaryLookUp();
     if(keyWord.equals(x.getFix())) x.dictionaryFix();
     if(keyWord.equals(x.getDelete())) x.dictionaryDelete();
-    if(keyWord.equals("--exit")) endApp();
+    if(keyWord.equals("exit")) endApp();
   }
 
   public void dictionarySearcher(){

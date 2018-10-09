@@ -31,14 +31,16 @@ public class DictionaryManagement {
 
   public void insertFromFile()  throws FileNotFoundException,IOException {
     Scanner tu;
-    File file = new File("src/project1/Tudien.txt");
+    File file = new File("src\\project1\\Tudien.txt");
     tu = new Scanner(file);
-    BufferedReader reader = new BufferedReader(new FileReader("C:/Github/asg1-nhok/src/word/Tudien.txt"));
+	FileReader fileread = new FileReader("C:\\Github\\asg1-nhok\\src\\project1\\Tudien.txt");
+    BufferedReader reader = new BufferedReader(fileread);
     int lines = 0;
     while (reader.readLine() != null) {
       lines++;
     }
     System.out.println(lines);
+	fileread.close();
     reader.close();
     for(int i=0; i<lines;i++){
       String s = new String(tu.nextLine());

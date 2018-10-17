@@ -141,7 +141,6 @@ public class Dictionary extends javax.swing.JFrame {
 
         list.setBackground(new java.awt.Color(204, 204, 204));
         list.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        list.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
         list.setForeground(new java.awt.Color(255, 0, 0));
         list.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -161,7 +160,6 @@ public class Dictionary extends javax.swing.JFrame {
         txtHTML.setBackground(new java.awt.Color(204, 204, 204));
         txtHTML.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         txtHTML.setContentType("text/html"); // NOI18N
-        txtHTML.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
         jScrollPane3.setViewportView(txtHTML);
 
         getContentPane().add(jScrollPane3);
@@ -187,7 +185,7 @@ public class Dictionary extends javax.swing.JFrame {
             }
         });
         getContentPane().add(modifyButton);
-        modifyButton.setBounds(490, 110, 110, 30);
+        modifyButton.setBounds(490, 110, 100, 30);
 
         addButton.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\image\\2.jpg")); // NOI18N
         addButton.setText("Add");
@@ -224,9 +222,9 @@ public class Dictionary extends javax.swing.JFrame {
         getContentPane().add(veButton);
         veButton.setBounds(390, 50, 190, 29);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setText("                          Võ Hồng Long && Trần Mạnh Thắng");
+        jLabel2.setText("                    Võ Hồng Long && Trần Mạnh Thắng");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(20, 480, 620, 30);
 
@@ -239,7 +237,7 @@ public class Dictionary extends javax.swing.JFrame {
             }
         });
         getContentPane().add(speakButton);
-        speakButton.setBounds(600, 110, 100, 30);
+        speakButton.setBounds(590, 110, 110, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

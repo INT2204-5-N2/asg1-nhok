@@ -34,7 +34,7 @@ public class Add extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setText("ADD WORD");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(60, 10, 230, 28);
+        jLabel1.setBounds(120, 0, 230, 28);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Từ muốn thêm");
@@ -72,7 +72,7 @@ public class Add extends javax.swing.JFrame {
 
         jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Windows 10 TIMT\\Pictures\\anh-girl-xinh-9x-kute-16.jpg")); // NOI18N
         getContentPane().add(jButton2);
-        jButton2.setBounds(220, 10, 190, 210);
+        jButton2.setBounds(220, 20, 190, 210);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

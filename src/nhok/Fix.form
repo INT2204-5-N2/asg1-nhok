@@ -154,11 +154,10 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="2" name="C:\Users\Windows 10 TIMT\Pictures\15349693_715851575257136_3441484425408713166_n.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jButton2"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="210" y="30" width="230" height="220"/>
+          <AbsoluteConstraints x="210" y="30" width="210" height="220"/>
         </Constraint>
       </Constraints>
     </Component>

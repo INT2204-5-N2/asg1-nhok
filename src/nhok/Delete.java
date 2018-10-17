@@ -60,10 +60,9 @@ public class Delete extends javax.swing.JFrame {
         getContentPane().add(jLabel3);
         jLabel3.setBounds(-150, 0, 140, 10);
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Windows 10 TIMT\\Pictures\\tải xuống (1).jpg")); // NOI18N
-        jButton2.setText("jButton2");
+        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\image\\Ảnh girl 1.jpg")); // NOI18N
         getContentPane().add(jButton2);
-        jButton2.setBounds(180, 40, 250, 190);
+        jButton2.setBounds(180, 40, 210, 190);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

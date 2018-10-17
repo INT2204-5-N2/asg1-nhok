@@ -26,7 +26,7 @@ public class Add extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 153, 153));
-        setMinimumSize(new java.awt.Dimension(400, 234));
+        setMinimumSize(new java.awt.Dimension(420, 234));
         setPreferredSize(new java.awt.Dimension(390, 300));
         getContentPane().setLayout(null);
 
@@ -59,7 +59,7 @@ public class Add extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 130, 250, 40);
+        jScrollPane1.setBounds(0, 130, 220, 40);
 
         jButton1.setText("OK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -71,9 +71,8 @@ public class Add extends javax.swing.JFrame {
         jButton1.setBounds(50, 180, 100, 23);
 
         jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Windows 10 TIMT\\Pictures\\anh-girl-xinh-9x-kute-16.jpg")); // NOI18N
-        jButton2.setText("jButton2");
         getContentPane().add(jButton2);
-        jButton2.setBounds(260, 10, 220, 210);
+        jButton2.setBounds(220, 10, 190, 210);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

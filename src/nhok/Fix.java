@@ -88,9 +88,8 @@ public class Fix extends javax.swing.JFrame {
         jLabel4.setBounds(10, 80, 100, 31);
 
         jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Windows 10 TIMT\\Pictures\\15349693_715851575257136_3441484425408713166_n.jpg")); // NOI18N
-        jButton2.setText("jButton2");
         getContentPane().add(jButton2);
-        jButton2.setBounds(210, 30, 230, 220);
+        jButton2.setBounds(210, 30, 210, 220);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

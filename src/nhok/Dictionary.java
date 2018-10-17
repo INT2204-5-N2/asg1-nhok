@@ -14,11 +14,12 @@ import javax.swing.UIManager;
 
 import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
-import de.javasoft.plaf.synthetica.SyntheticaOrangeMetallicLookAndFeel;
+import de.javasoft.plaf.synthetica.SyntheticaBlackEyeLookAndFeel;
+import javax.swing.ImageIcon;
 
 public class Dictionary extends javax.swing.JFrame {
-    final String EV = "C:\\Github\\asg1-nhok\\asg1-nhok\\src\\database\\E_V.txt";
-    final String VE = "C:\\Github\\asg1-nhok\\asg1-nhok\\src\\database\\V_E.txt";
+    final String EV = "C:\\Github\\asg1-nhok\\src\\database\\E_V.txt";
+    final String VE = "C:\\Github\\asg1-nhok\\src\\database\\V_E.txt";
     
    VoiceManager vm;
     Voice v;
@@ -26,7 +27,7 @@ public class Dictionary extends javax.swing.JFrame {
     public Dictionary() {
         initComponents();
         setTitle("Dictionary");
-        setLocation(400,150);
+        setLocationRelativeTo(null);
     }
 
     public void loadDataIntoMap(String path)
@@ -43,7 +44,7 @@ public class Dictionary extends javax.swing.JFrame {
                 int i = line.indexOf("<html>");
                 word = line.substring(0, i);
                 word = word.trim();
-                s = line.substring(i); //s=<html>....</html>
+                s = line.substring(i); 
                 hm.put(word, s);
                 keys.add(word);
                 mod.addElement(word);
@@ -96,14 +97,15 @@ public class Dictionary extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 51, 51));
-        setMinimumSize(new java.awt.Dimension(650, 530));
+        setMinimumSize(new java.awt.Dimension(703, 550));
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 153));
-        jLabel1.setText("  Dictionary 4 Everyone");
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Vladimir Script", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\image\\background3.jpg")); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 1, 440, 90);
+        jLabel1.setBounds(0, 0, 320, 110);
 
         jTextField1.setText("Write your word:...");
         jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -123,8 +125,9 @@ public class Dictionary extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(10, 100, 180, 30);
+        jTextField1.setBounds(10, 110, 180, 30);
 
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\image\\1.jpg")); // NOI18N
         jButton1.setText("Search");
         jButton1.setToolTipText("Search something");
         jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -134,7 +137,7 @@ public class Dictionary extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(190, 100, 90, 30);
+        jButton1.setBounds(190, 110, 90, 30);
 
         list.setBackground(new java.awt.Color(204, 204, 204));
         list.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -153,7 +156,7 @@ public class Dictionary extends javax.swing.JFrame {
         jScrollPane2.setViewportView(list);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(10, 135, 250, 319);
+        jScrollPane2.setBounds(10, 140, 250, 319);
 
         txtHTML.setBackground(new java.awt.Color(204, 204, 204));
         txtHTML.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -162,8 +165,9 @@ public class Dictionary extends javax.swing.JFrame {
         jScrollPane3.setViewportView(txtHTML);
 
         getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(270, 140, 350, 319);
+        jScrollPane3.setBounds(270, 140, 420, 319);
 
+        removeButton.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\image\\3.png")); // NOI18N
         removeButton.setText("Delete");
         removeButton.setToolTipText("Delete");
         removeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -172,8 +176,9 @@ public class Dictionary extends javax.swing.JFrame {
             }
         });
         getContentPane().add(removeButton);
-        removeButton.setBounds(370, 100, 90, 30);
+        removeButton.setBounds(380, 110, 110, 30);
 
+        modifyButton.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\image\\4.png")); // NOI18N
         modifyButton.setText("Fix");
         modifyButton.setToolTipText("Fix");
         modifyButton.addActionListener(new java.awt.event.ActionListener() {
@@ -182,8 +187,9 @@ public class Dictionary extends javax.swing.JFrame {
             }
         });
         getContentPane().add(modifyButton);
-        modifyButton.setBounds(460, 100, 70, 30);
+        modifyButton.setBounds(490, 110, 110, 30);
 
+        addButton.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\image\\2.jpg")); // NOI18N
         addButton.setText("Add");
         addButton.setToolTipText("Add");
         addButton.addActionListener(new java.awt.event.ActionListener() {
@@ -192,11 +198,11 @@ public class Dictionary extends javax.swing.JFrame {
             }
         });
         getContentPane().add(addButton);
-        addButton.setBounds(280, 100, 90, 30);
+        addButton.setBounds(280, 110, 100, 30);
 
         buttonGroup1.add(evButton);
-        evButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        evButton.setForeground(new java.awt.Color(0, 0, 153));
+        evButton.setFont(new java.awt.Font("Viner Hand ITC", 1, 12)); // NOI18N
+        evButton.setForeground(new java.awt.Color(51, 51, 255));
         evButton.setText("English-Vietnamese");
         evButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,11 +210,11 @@ public class Dictionary extends javax.swing.JFrame {
             }
         });
         getContentPane().add(evButton);
-        evButton.setBounds(450, 10, 137, 23);
+        evButton.setBounds(390, 10, 200, 29);
 
         buttonGroup1.add(veButton);
-        veButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        veButton.setForeground(new java.awt.Color(0, 0, 153));
+        veButton.setFont(new java.awt.Font("Viner Hand ITC", 1, 12)); // NOI18N
+        veButton.setForeground(new java.awt.Color(51, 51, 255));
         veButton.setText("Vietnamese-English");
         veButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,14 +222,15 @@ public class Dictionary extends javax.swing.JFrame {
             }
         });
         getContentPane().add(veButton);
-        veButton.setBounds(450, 40, 137, 23);
+        veButton.setBounds(390, 50, 190, 29);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 51, 51));
-        jLabel2.setText("                         Võ Hồng Long && Trần Mạnh Thắng");
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2.setText("                          Võ Hồng Long && Trần Mạnh Thắng");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(9, 460, 620, 30);
+        jLabel2.setBounds(20, 480, 620, 30);
 
+        speakButton.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\image\\5.jpg")); // NOI18N
         speakButton.setText("Speak");
         speakButton.setToolTipText("Speak out");
         speakButton.addActionListener(new java.awt.event.ActionListener() {
@@ -232,7 +239,7 @@ public class Dictionary extends javax.swing.JFrame {
             }
         });
         getContentPane().add(speakButton);
-        speakButton.setBounds(530, 100, 90, 30);
+        speakButton.setBounds(600, 110, 100, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -421,7 +428,7 @@ public class Dictionary extends javax.swing.JFrame {
         
          try 
         {
-       UIManager.setLookAndFeel(new SyntheticaOrangeMetallicLookAndFeel());
+       UIManager.setLookAndFeel(new SyntheticaBlackEyeLookAndFeel());
         } 
         catch (Exception e) 
         {

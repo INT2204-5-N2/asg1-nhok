@@ -12,14 +12,15 @@ import javax.swing.DefaultListModel;
 import javax.swing.JScrollBar;
 import javax.swing.UIManager;
 
-import com.sun.speech.freetts.Voice;
+import com.sun.speech.freetts.Voice.class;
 import com.sun.speech.freetts.VoiceManager;
 import de.javasoft.plaf.synthetica.SyntheticaBlackEyeLookAndFeel;
 import javax.swing.ImageIcon;
 
+
 public class Dictionary extends javax.swing.JFrame {
     final String EV = "C:\\Github\\asg1-nhok\\asg1-nhok\\src\\database\\E_V.txt";
-    final String VE = "C:\\Github\\asg1-nhok\\\\asg1-nhoksrc\\database\\V_E.txt";
+    final String VE = "C:\\Github\\asg1-nhok\\asg1-nhok\\src\\database\\V_E.txt";
     
    VoiceManager vm;
     Voice v;
@@ -411,7 +412,7 @@ public class Dictionary extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

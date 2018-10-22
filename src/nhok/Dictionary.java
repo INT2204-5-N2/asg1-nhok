@@ -12,7 +12,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JScrollBar;
 import javax.swing.UIManager;
 
-import com.sun.speech.freetts.Voice.class;
+import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
 import de.javasoft.plaf.synthetica.SyntheticaBlackEyeLookAndFeel;
 import javax.swing.ImageIcon;

@@ -349,7 +349,7 @@ public class Dictionary extends javax.swing.JFrame {
         }
         System.setProperty("mbrola.base", "mbrola");
        vm = VoiceManager.getInstance();
-        v = vm.getVoice("mbrola_en1");
+        v = vm.getVoice("mbrola_us1");
         v.allocate();
         v.speak(speak);
     }//GEN-LAST:event_speakButtonActionPerformed

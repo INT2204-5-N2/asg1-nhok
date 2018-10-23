@@ -42,7 +42,11 @@ public class Dictionary extends javax.swing.JFrame {
         {   
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(path),"UTF8"));
             
+<<<<<<< HEAD
             while((str1 = br.readLine()) != null)
+=======
+            while((line = br.readLine()) != null)
+>>>>>>> 8b9c18c49f6a663060a3e64d29d6b7ec3b44ff45
             {
                 int i = str1.indexOf("<html>");
                 str2 = str1.substring(0, i);
@@ -388,6 +392,18 @@ public class Dictionary extends javax.swing.JFrame {
     
     public void FixWord(String w, String nw, String m)
     {
+<<<<<<< HEAD
+=======
+        if (nw.equals("")){
+            DeleteWord(w);
+            AddWord(w,nm);
+            //System.out.println("Hi");
+        }
+        else if (nm.equals("")){
+            String mean;
+            mean = ""+hm.get(w);
+            //System.out.println("Hi");
+>>>>>>> 8b9c18c49f6a663060a3e64d29d6b7ec3b44ff45
             DeleteWord(w);
             AddWord(nw, m); 
         if(check) write(EV);

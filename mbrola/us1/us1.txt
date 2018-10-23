@@ -1,13 +1,13 @@
-  ##        ##                     
-  ##        ##      ########      ######
-  ##        ##    ##             #     ##
-  ##        ##      ########           ##
-  ##        ##              ##    ######   
-  ##        ##    ##        ##   ##   
-    ########        ########     ########  
-release 0.1 - August 98
+  ##        ##                        ##
+  ##        ##      ########        ####
+  ##        ##    ##              ##  ##
+  ##        ##      ########          ##
+  ##        ##              ##        ##
+  ##        ##    ##        ##        ##
+    ########        ########      ##########  
+release 0.3 - February 98
 --------------------------------------------------------------
-US2 - An American English male voice for the MBROLA synthesizer
+US1 - An American English male voice for the MBROLA synthesizer
 
 Created by :  Babel Technology SA
               Speech Synthesis Group
@@ -16,16 +16,16 @@ Created by :  Babel Technology SA
 Table of Contents
 --------------------------------------------------------------
 
-1.0 Description of the US2 diphone database
+1.0 Description of the US1 diphone database
 2.0 Installation and tests
 3.0 Announcement
 4.0 Acknowledgements
 
 --------------------------------------------------------------
-1.0 Description of the US2 diphone database
+1.0 Description of the US1 diphone database
 --------------------------------------------------------------
 
-US2   is a diphone database  for  american english, consisting of 2065
+US1   is a diphone database  for  american english, consisting of 2025
 diphones, male voice.
 
 The following  phoneme  symbols are  assumed in  our diphone  sets. It
@@ -71,6 +71,7 @@ r=    her urgent
 
 i     even
 A     arthur
+O     all
 u     oodles
 I     illness
 E     else
@@ -84,9 +85,6 @@ OI    oyster
 @U    over
 aU    out
 
-O     all
-Or Allophone of O in front of /r/ like in 'sort'
-
 The diphone matrix is square, no diphone lacking... of course diphone
 like t-N may not sound optimal :-)
 
@@ -97,24 +95,24 @@ like t-N may not sound optimal :-)
 If  you  have  not copied   the MBROLA software   yet,  please consult
 the MBROLA project homepage and get it.
 
-Copy us2.zip into the mbrola directory and unzip it : 
+Copy us1.zip into the mbrola directory and unzip it : 
 
-   unzip us2.zip (or pkunzip on PC/DOS)
+   unzip us1.zip (or pkunzip on PC/DOS)
 
 Try 
 
-   mbrola us2 TEST/alice.pho test.wav
+   mbrola us1 TEST/alice.pho test.wav
 
 to create a sound file for a short excerpt  of Alice in Wonderland. In
 this   example the  audio  file   follows  the RIFF   Wave format. But
 depending  on the extension test.au,  test.aif, or test.raw other file
 formats can be obtained. Listen to it with your favorite sound editor,
 and try the other command files  (*.pho) to have a  better idea of the
-quality of speech that  can  be synthesized with   MBROLA and the  US2
+quality of speech that  can  be synthesized with   MBROLA and the  US1
 database.
 
 On Unix  systems you can pipe  the audio ouput  to the sound player as
-on a HP : mbrola us2 phone.pho - | splayer -srate 16000 -l16
+on a HP : mbrola us1 phone.pho - | splayer -srate 16000 -l16
 
 Also refer  to the readme.txt file provided  with  the mbrola software
 for using it. 
@@ -125,18 +123,19 @@ for using it.
 
 This database is a beta  release, and we  will take your comments into
 account for    future  updates. Updates    will be  announced  on  the
-mbrola-news mailing list.
+mbrola-interrest mailing list.
 
 For more  information and demos,  consult the Babel Technology SA home
 page at: 
 
-     http://www.babeltech.com
+     http://www.babeltech.be
 
 --------------------------------------------------------------
 4.0 Acknowledgments
 --------------------------------------------------------------
 
-We would like to thank David Pullen for his steady pitch
+We would like to  thank  Vincent Pagel  for his efforts  in desingning
+this database before xmas.
 
 --------------------------------------------------------------
 
@@ -148,8 +147,8 @@ Belgium
 
 Tel: +32 65 37 42 75
 Fax: +32 65 37 42 76
-Email: pagel@babeltech.com
-WWW: http://www.babeltech.com
+Email: secr@babeltech.be
+WWW: http://www.babeltech.be
         
 --------------------------------------------------------------
 

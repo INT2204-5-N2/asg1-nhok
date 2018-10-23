@@ -10,7 +10,7 @@ By obtaining, using and/or copying this database, you agree
 that you have read, understood, and will comply with these 
 terms and conditions :
 
-Terms and conditions on the use of US2
+Terms and conditions on the use of US1
 --------------------------------------
 
 Permission is granted to use this database for synthesizing 
@@ -19,14 +19,14 @@ from the MBROLA project www homepage :
 
    http://tcts.fpms.ac.be/synthesis
    
-Terms and conditions for the distribution of US2
+Terms and conditions for the distribution of US1
 ------------------------------------------------
 
 The distribution of this database is submitted to the same terms 
 and conditions as the distribution of the Mbrola program. 
 In addition, this database may not be sold or incorporated into 
 any product which is sold without prior permission from the 
-Diphone Database Owner ( pagel@babeltech.be ).
+Diphone Database Owner ( secr@babeltech.be ).
 
 When no charge is made, this database may be copied and distributed
 freely, provided that this notice is copied and distributed with it.

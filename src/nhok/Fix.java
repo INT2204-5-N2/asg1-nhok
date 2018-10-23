@@ -17,14 +17,13 @@ public class Fix extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         w = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        nm = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         nw = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        m = new javax.swing.JTextField();
 
         setMinimumSize(new java.awt.Dimension(312, 272));
         setPreferredSize(new java.awt.Dimension(400, 330));
@@ -43,16 +42,6 @@ public class Fix extends javax.swing.JFrame {
         });
         getContentPane().add(w);
         w.setBounds(10, 50, 194, 29);
-
-        jScrollPane1.setMinimumSize(new java.awt.Dimension(380, 280));
-        jScrollPane1.setPreferredSize(new java.awt.Dimension(450, 340));
-
-        nm.setColumns(20);
-        nm.setRows(5);
-        jScrollPane1.setViewportView(nm);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 170, 190, 50);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Nhập từ cần sửa:");
@@ -87,19 +76,23 @@ public class Fix extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(10, 80, 100, 31);
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Windows 10 TIMT\\Pictures\\15349693_715851575257136_3441484425408713166_n.jpg")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\asg1-nhok\\image\\Ảnh girl 2.jpg")); // NOI18N
         getContentPane().add(jButton2);
         jButton2.setBounds(210, 30, 210, 220);
+
+        m.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
+        getContentPane().add(m);
+        m.setBounds(10, 170, 190, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if(nm.getText().trim().equals(""))
+        if(m.getText().trim().equals(""))
             dictionary.FixWord(w.getText().trim(),nw.getText().trim(),"");
         else
-            dictionary.FixWord(w.getText().trim(),nw.getText().trim(),"<html><i></i><br/><ul><li><font color='#cc0000'><b> "+nm.getText().trim()+"</b></font></li></ul></html>");
+            dictionary.FixWord(w.getText().trim(),nw.getText().trim(),"<html><i></i><br/><ul><li><font color='#cc0000'><b> "+m.getText().trim()+"</b></font></li></ul></html>");
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -118,8 +111,7 @@ public class Fix extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea nm;
+    private javax.swing.JTextField m;
     private javax.swing.JTextField nw;
     private javax.swing.JTextField w;
     // End of variables declaration//GEN-END:variables

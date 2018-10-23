@@ -11,10 +11,11 @@ import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JScrollBar;
 import javax.swing.UIManager;
-
-import com.sun.speech.freetts.Voice.class;
+import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
 import de.javasoft.plaf.synthetica.SyntheticaBlackEyeLookAndFeel;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import javax.swing.ImageIcon;
 
 
@@ -23,7 +24,7 @@ public class Dictionary extends javax.swing.JFrame {
     final String VE = "C:\\Github\\asg1-nhok\\asg1-nhok\\src\\database\\V_E.txt";
     
    VoiceManager vm;
-    Voice v;
+   Voice v;
     
     public Dictionary() {
         initComponents();
@@ -33,24 +34,25 @@ public class Dictionary extends javax.swing.JFrame {
 
     public void loadDataIntoMap(String path)
     {
-        hm = new HashMap<>();
-        keys = new ArrayList<>();
-        String line,word,s;
-        mod = new DefaultListModel<>();
+        hashmap = new HashMap<>();
+        arraylist = new ArrayList<>();
+        String str1,str2,s;
+        model = new DefaultListModel<>();
         try
-        {
-            BufferedReader br = new BufferedReader(new FileReader(path));
-            while((line = br.readLine()) != null)
+        {   
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(path),"UTF8"));
+            
+            while((str1 = br.readLine()) != null)
             {
-                int i = line.indexOf("<html>");
-                word = line.substring(0, i);
-                word = word.trim();
-                s = line.substring(i); 
-                hm.put(word, s);
-                keys.add(word);
-                mod.addElement(word);
+                int i = str1.indexOf("<html>");
+                str2 = str1.substring(0, i);
+                str2 = str2.trim();
+                s = str1.substring(i); 
+                hashmap.put(str2, s);
+                arraylist.add(str2);
+                model.addElement(str2);
             }
-            list.setModel(mod);
+            list.setModel(model);
             br.close();
         }catch (IOException e){
             e.printStackTrace();
@@ -59,14 +61,14 @@ public class Dictionary extends javax.swing.JFrame {
     }
     
     public void write(String path){
-        BufferedWriter bw= null;
-        FileWriter fw= null;
+        BufferedWriter bw;
+        FileWriter fw;
         try{
             fw = new FileWriter(path);
             bw = new BufferedWriter(fw);
-            for(int i=0;i<keys.size();i++){
-                bw.write(keys.get(i));
-                bw.write(hm.get(keys.get(i)));
+            for(int i=0;i<arraylist.size();i++){
+                bw.write(arraylist.get(i));
+                bw.write(hashmap.get(arraylist.get(i)));
                 bw.newLine();
             }
             bw.close();
@@ -256,12 +258,12 @@ public class Dictionary extends javax.swing.JFrame {
         String word = jTextField1.getText().trim().toLowerCase();
         //Tim nghia cua Word
         String mean;
-        if(hm.containsKey(word))
+        if(hashmap.containsKey(word))
         {
-            mean = hm.get(word);
+            mean = hashmap.get(word);
         }
         else
-            mean = "<html><body><font color='red'>The word you've searched does NOT exist in Nest Dictionary!!!</font></body></html>";
+            mean = "<html><body><font color='red'>The word you've searched does NOT exist in Nhok Dictionary!!!</font></body></html>";
         //Output nghia cua Word ra 
         txtHTML.setText(mean);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -275,8 +277,8 @@ public class Dictionary extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(!list.isSelectionEmpty()){
             int index = list.getSelectedIndex();
-            String w = keys.get(index);
-            txtHTML.setText(hm.get(w));
+            String w = arraylist.get(index);
+            txtHTML.setText(hashmap.get(w));
             }
     }//GEN-LAST:event_listValueChanged
 
@@ -286,9 +288,9 @@ public class Dictionary extends javax.swing.JFrame {
         //De cham hon 1 don vi
         text += evt.getKeyChar();
         text = text.trim().toLowerCase();
-        for(int i=0;i<mod.size();i++)
+        for(int i=0;i<model.size();i++)
         {
-            String val = ""+mod.getElementAt(i);
+            String val = ""+model.getElementAt(i);
             if(val.startsWith(text))
             {
                 list.setSelectedIndex(i);
@@ -342,7 +344,7 @@ public class Dictionary extends javax.swing.JFrame {
         if(list.isSelectionEmpty()) speak= jTextField1.getText();
         else {
             int index=list.getSelectedIndex();
-            speak = keys.get(index);
+            speak = arraylist.get(index);
         }
         System.setProperty("mbrola.base", "mbrola");
        vm = VoiceManager.getInstance();
@@ -351,65 +353,47 @@ public class Dictionary extends javax.swing.JFrame {
         v.speak(speak);
     }//GEN-LAST:event_speakButtonActionPerformed
 
-    public int searchBinary(String w, ArrayList<String> k)
-    {
-        if (k.get(0).compareTo(w)>=0) return 0;
-        int d = 0, c = k.size();
-        while (d<c-1){
-            int g = (d+c)/2;
-            if (k.get(g).compareTo(w)<0) d=g;else c=g;
+    public int search(String w, ArrayList<String> k)
+    {   
+        int i;
+        for(i=0;i<k.size();i++){
+            if(k.get(i).compareTo(w)>=0){
+                break;
+            }
         }
-        return c;
+        return i;
     }
     public void AddWord(String w, String m)
     {
         w = w.trim().toLowerCase();
-        hm.put(w, m);
-        int i = searchBinary(w,keys);
-        keys.add(i,w);
-        mod.add(i, w);
+        hashmap.put(w, m);
+        int i = search(w,arraylist);
+        arraylist.add(i,w);
+        model.add(i, w);
         if(check) write(EV);
             else write(VE);
     }
     
     public void DeleteWord(String w)
     {
-        int i = keys.indexOf(w);
-        if (i != -1){
-            keys.remove(i);
-            hm.remove(w);
-            mod.removeElementAt(i);
-        }
+        int i = arraylist.indexOf(w);
+
+            arraylist.remove(i);
+            hashmap.remove(w);
+            model.removeElementAt(i);
+        
         if(check) write(EV);
             else write(VE);
     }
     
-    public void FixWord(String w, String nw, String nm)
+    public void FixWord(String w, String nw, String m)
     {
-        if (nw.equals("")){
             DeleteWord(w);
-            AddWord(w,nm);
-            System.out.println("Hi");
-        }
-        else if (nm.equals("")){
-            String mean;
-            mean = ""+hm.get(w);
-            System.out.println("Hi");
-            DeleteWord(w);
-            AddWord(nw, mean); 
-        } else{
-            DeleteWord(w);
-            AddWord(nw,nm);
-        }
+            AddWord(nw, m); 
         if(check) write(EV);
             else write(VE);
     }
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("".equals(info.getName())) {
@@ -444,9 +428,9 @@ public class Dictionary extends javax.swing.JFrame {
             }
         });
     }
-    private HashMap<String, String> hm;
-    private ArrayList<String> keys;
-    private DefaultListModel<String> mod;
+    private HashMap<String, String> hashmap;
+    private ArrayList<String> arraylist;
+    private DefaultListModel<String> model;
     private boolean check; // true EV false VE
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addButton;

@@ -388,18 +388,11 @@ public class Dictionary extends javax.swing.JFrame {
     
     public void FixWord(String w, String nw, String m)
     {
-        if (nw.equals("")){
-            DeleteWord(w);
-            AddWord(w,m);
-        }
-        else if (m.equals("")){
-            String mean;
-            mean = ""+hashmap.get(w);
             DeleteWord(w);
             AddWord(nw, m); 
         if(check) write(EV);
             else write(VE);
-    }
+    
    }
     public static void main(String args[]) {
         try {

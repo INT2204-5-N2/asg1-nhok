@@ -11,10 +11,11 @@ import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JScrollBar;
 import javax.swing.UIManager;
-
 import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
 import de.javasoft.plaf.synthetica.SyntheticaBlackEyeLookAndFeel;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import javax.swing.ImageIcon;
 
 
@@ -23,7 +24,7 @@ public class Dictionary extends javax.swing.JFrame {
     final String VE = "C:\\Github\\asg1-nhok\\asg1-nhok\\src\\database\\V_E.txt";
     
    VoiceManager vm;
-    Voice v;
+   Voice v;
     
     public Dictionary() {
         initComponents();
@@ -38,8 +39,9 @@ public class Dictionary extends javax.swing.JFrame {
         String line,word,s;
         mod = new DefaultListModel<>();
         try
-        {
-            BufferedReader br = new BufferedReader(new FileReader(path));
+        {   
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(path),"UTF8"));
+            
             while((line = br.readLine()) != null)
             {
                 int i = line.indexOf("<html>");
@@ -389,12 +391,12 @@ public class Dictionary extends javax.swing.JFrame {
         if (nw.equals("")){
             DeleteWord(w);
             AddWord(w,nm);
-            System.out.println("Hi");
+            //System.out.println("Hi");
         }
         else if (nm.equals("")){
             String mean;
             mean = ""+hm.get(w);
-            System.out.println("Hi");
+            //System.out.println("Hi");
             DeleteWord(w);
             AddWord(nw, mean); 
         } else{
@@ -405,11 +407,6 @@ public class Dictionary extends javax.swing.JFrame {
             else write(VE);
     }
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("".equals(info.getName())) {

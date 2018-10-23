@@ -275,7 +275,7 @@ public class Dictionary extends javax.swing.JFrame {
     }//GEN-LAST:event_listKeyTyped
 
     private void listValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_listValueChanged
-        // TODO add your handling code here:
+         //TODO add your handling code here:
         if(!list.isSelectionEmpty()){
             int index = list.getSelectedIndex();
             String w = arraylist.get(index);
@@ -286,17 +286,16 @@ public class Dictionary extends javax.swing.JFrame {
     private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
         // TODO add your handling code here:
         String text = jTextField1.getText().trim();
-        //De cham hon 1 don vi
         text += evt.getKeyChar();
         text = text.trim().toLowerCase();
         for(int i=0;i<model.size();i++)
         {
             String val = ""+model.getElementAt(i);
             if(val.startsWith(text))
-            {
+           {
                 list.setSelectedIndex(i);
                 JScrollBar sb=jScrollPane2.getVerticalScrollBar();
-                sb.setValue(i*19);
+                sb.setValue(i*15);
                 return;
             }
         }

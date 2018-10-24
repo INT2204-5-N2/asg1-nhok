@@ -256,7 +256,7 @@ public class Dictionary extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         //Lay Word duoc nhap vao
-        String word = jTextField1.getText().trim().toLowerCase();
+        String word = jTextField1.getText().trim();
         //Tim nghia cua Word
         String mean;
         if(hashmap.containsKey(word))
@@ -264,7 +264,7 @@ public class Dictionary extends javax.swing.JFrame {
             mean = hashmap.get(word);
         }
         else
-            mean = "<html><body><font color='red'>The word you've searched does NOT exist in Nhok Dictionary!!!</font></body></html>";
+            mean = "<html><body><font color='red'>"+word+"</font></body></html>";
         //Output nghia cua Word ra 
         txtHTML.setText(mean);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -287,10 +287,10 @@ public class Dictionary extends javax.swing.JFrame {
         // TODO add your handling code here:
         String text = jTextField1.getText().trim();
         text += evt.getKeyChar();
-        text = text.trim().toLowerCase();
+        text = text.trim();
         for(int i=0;i<model.size();i++)
         {
-            String val = ""+model.getElementAt(i);
+            String val = model.getElementAt(i);
             if(val.startsWith(text))
            {
                 list.setSelectedIndex(i);
@@ -365,7 +365,7 @@ public class Dictionary extends javax.swing.JFrame {
     }
     public void AddWord(String w, String m)
     {
-        w = w.trim().toLowerCase();
+        w = w.trim();
         hashmap.put(w, m);
         int i = search(w,arraylist);
         arraylist.add(i,w);

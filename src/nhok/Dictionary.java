@@ -47,7 +47,6 @@ public class Dictionary extends javax.swing.JFrame {
             {
                 int i = str1.indexOf("<html>");
                 str2 = str1.substring(0, i);
-                str2 = str2.trim();
                 s = str1.substring(i); 
                 hashmap.put(str2, s);
                 arraylist.add(str2);
@@ -256,7 +255,7 @@ public class Dictionary extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         //Lay Word duoc nhap vao
-        String word = jTextField1.getText().trim();
+        String word = jTextField1.getText();
         //Tim nghia cua Word
         String mean;
         if(hashmap.containsKey(word))
@@ -285,9 +284,8 @@ public class Dictionary extends javax.swing.JFrame {
 
     private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
         // TODO add your handling code here:
-        String text = jTextField1.getText().trim();
+        String text = jTextField1.getText();
         text += evt.getKeyChar();
-        text = text.trim();
         for(int i=0;i<model.size();i++)
         {
             String val = model.getElementAt(i);
@@ -365,7 +363,6 @@ public class Dictionary extends javax.swing.JFrame {
     }
     public void AddWord(String w, String m)
     {
-        w = w.trim();
         hashmap.put(w, m);
         int i = search(w,arraylist);
         arraylist.add(i,w);

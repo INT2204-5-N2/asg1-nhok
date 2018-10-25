@@ -20,8 +20,8 @@ import javax.swing.ImageIcon;
 
 
 public class Dictionary extends javax.swing.JFrame {
-    final String EV = "database\\E_V.txt";
-    final String VE = "database\\V_E.txt";
+    final String EV = "data\\E_V.txt";
+    final String VE = "data\\V_E.txt";
     
    VoiceManager vm;
    Voice v;

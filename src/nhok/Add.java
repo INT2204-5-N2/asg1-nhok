@@ -62,7 +62,7 @@ public class Add extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(50, 180, 100, 23);
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\asg1-nhok\\image\\Ảnh girl 3.jpg")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Ảnh girl 1.jpg"))); // NOI18N
         getContentPane().add(jButton2);
         jButton2.setBounds(220, 20, 190, 210);
 

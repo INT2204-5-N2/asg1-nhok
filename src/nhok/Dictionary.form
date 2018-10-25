@@ -47,7 +47,7 @@
           <Color blue="0" green="0" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Github\asg1-nhok\asg1-nhok\image\background3.jpg"/>
+          <Image iconType="3" name="/image/background3.jpg"/>
         </Property>
       </Properties>
       <Constraints>
@@ -79,7 +79,7 @@
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Github\asg1-nhok\asg1-nhok\image\1.jpg"/>
+          <Image iconType="3" name="/image/1.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Search"/>
         <Property name="toolTipText" type="java.lang.String" value="Search something"/>
@@ -173,7 +173,7 @@
     <Component class="javax.swing.JButton" name="removeButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Github\asg1-nhok\asg1-nhok\image\3.png"/>
+          <Image iconType="3" name="/image/3.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Delete"/>
         <Property name="toolTipText" type="java.lang.String" value="Delete"/>
@@ -190,7 +190,7 @@
     <Component class="javax.swing.JButton" name="modifyButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Github\asg1-nhok\asg1-nhok\image\4.png"/>
+          <Image iconType="3" name="/image/4.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Fix"/>
         <Property name="toolTipText" type="java.lang.String" value="Fix"/>
@@ -207,7 +207,7 @@
     <Component class="javax.swing.JButton" name="addButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Github\asg1-nhok\asg1-nhok\image\2.jpg"/>
+          <Image iconType="3" name="/image/2.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Add"/>
         <Property name="toolTipText" type="java.lang.String" value="Add"/>
@@ -284,7 +284,7 @@
     <Component class="javax.swing.JButton" name="speakButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Github\asg1-nhok\asg1-nhok\image\5.jpg"/>
+          <Image iconType="3" name="/image/5.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Speak"/>
         <Property name="toolTipText" type="java.lang.String" value="Speak out"/>

@@ -20,8 +20,8 @@ import javax.swing.ImageIcon;
 
 
 public class Dictionary extends javax.swing.JFrame {
-    final String EV = "C:\\Github\\asg1-nhok\\asg1-nhok\\src\\database\\E_V.txt";
-    final String VE = "C:\\Github\\asg1-nhok\\asg1-nhok\\src\\database\\V_E.txt";
+    final String EV = "C:\\Users\\Windows 10 TIMT\\Desktop\\asg1-nhok\\asg1-nhok\\src\\database\\E_V.txt";
+    final String VE = "C:\\Users\\Windows 10 TIMT\\Desktop\\asg1-nhok\\asg1-nhok\\src\\database\\V_E.txt";
     
    VoiceManager vm;
    Voice v;
@@ -106,7 +106,7 @@ public class Dictionary extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Vladimir Script", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\asg1-nhok\\image\\background3.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/background3.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 320, 110);
 
@@ -130,7 +130,7 @@ public class Dictionary extends javax.swing.JFrame {
         getContentPane().add(jTextField1);
         jTextField1.setBounds(10, 110, 180, 30);
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\asg1-nhok\\image\\1.jpg")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/1.jpg"))); // NOI18N
         jButton1.setText("Search");
         jButton1.setToolTipText("Search something");
         jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -170,7 +170,7 @@ public class Dictionary extends javax.swing.JFrame {
         getContentPane().add(jScrollPane3);
         jScrollPane3.setBounds(270, 140, 420, 319);
 
-        removeButton.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\asg1-nhok\\image\\3.png")); // NOI18N
+        removeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/3.png"))); // NOI18N
         removeButton.setText("Delete");
         removeButton.setToolTipText("Delete");
         removeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -181,7 +181,7 @@ public class Dictionary extends javax.swing.JFrame {
         getContentPane().add(removeButton);
         removeButton.setBounds(380, 110, 110, 30);
 
-        modifyButton.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\asg1-nhok\\image\\4.png")); // NOI18N
+        modifyButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/4.png"))); // NOI18N
         modifyButton.setText("Fix");
         modifyButton.setToolTipText("Fix");
         modifyButton.addActionListener(new java.awt.event.ActionListener() {
@@ -192,7 +192,7 @@ public class Dictionary extends javax.swing.JFrame {
         getContentPane().add(modifyButton);
         modifyButton.setBounds(490, 110, 100, 30);
 
-        addButton.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\asg1-nhok\\image\\2.jpg")); // NOI18N
+        addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/2.jpg"))); // NOI18N
         addButton.setText("Add");
         addButton.setToolTipText("Add");
         addButton.addActionListener(new java.awt.event.ActionListener() {
@@ -233,7 +233,7 @@ public class Dictionary extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(20, 480, 620, 30);
 
-        speakButton.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\asg1-nhok\\image\\5.jpg")); // NOI18N
+        speakButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/5.jpg"))); // NOI18N
         speakButton.setText("Speak");
         speakButton.setToolTipText("Speak out");
         speakButton.addActionListener(new java.awt.event.ActionListener() {

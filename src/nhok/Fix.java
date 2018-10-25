@@ -76,7 +76,7 @@ public class Fix extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(10, 80, 100, 31);
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Github\\asg1-nhok\\asg1-nhok\\image\\Ảnh girl 2.jpg")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Ảnh girl 3.jpg"))); // NOI18N
         getContentPane().add(jButton2);
         jButton2.setBounds(210, 30, 210, 220);
 
